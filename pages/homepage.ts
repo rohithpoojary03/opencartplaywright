@@ -1,33 +1,28 @@
 import { Page, expect, Locator } from '@playwright/test';
 
-export class HomePage{
-
+export class HomePage {
     private readonly page: Page;
-    //locators
+    
+    // Locators
     private readonly lnkMyAccount: Locator;
     private readonly lnkRegister: Locator;
     private readonly linkLogin: Locator;
     private readonly txtSearchbox: Locator;
     private readonly btnSearch: Locator;
 
-
-    //constructor
-    constructor(page:Page){
-
-        this.page=page;
+    constructor(page: Page) {
+        this.page = page;
+        
+        // Initialize locators
         this.lnkMyAccount = page.locator('span:has-text("My Account")');
         this.lnkRegister = page.locator('a:has-text("Register")');
         this.linkLogin = page.locator('a:has-text("Login")');
         this.txtSearchbox = page.locator('input[placeholder="Search"]');
         this.btnSearch = page.locator('#search button[type="button"]');
-
     }
 
-    //action methods
-
-      // Check if HomePage exists
+    // Check if HomePage exists
     async isHomePageExists(){
-
         let title:string = await this.page.title();
         if(title)
         {
@@ -36,7 +31,7 @@ export class HomePage{
         return false;
     }
 
- // Click "My Account" link
+    // Click "My Account" link
     async clickMyAccount(){
         try {
             await this.lnkMyAccount.click();
@@ -46,7 +41,7 @@ export class HomePage{
         }
     }
 
- // Click "Register" link
+    // Click "Register" link
     async clickRegister(){
         try {
             await this.lnkRegister.click();
@@ -85,6 +80,4 @@ export class HomePage{
             throw error;
         }
     }
-    
-
 }

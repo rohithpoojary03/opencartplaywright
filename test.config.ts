@@ -7,8 +7,8 @@ export class TestConfig {
   //appUrl="https://naveenautomationlabs.com/opencart"
 
   //valid login credentials
-  email="pavanol@abc.com"
-  password="test@123"
+  email="rohithpb@abc.com"
+  password="test@123456"
 
   //product details
   productName="MacBook"
