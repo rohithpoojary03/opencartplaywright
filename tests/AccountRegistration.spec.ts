@@ -13,7 +13,7 @@
 
 import { test, expect,Page } from '@playwright/test';
 import { HomePage } from '../pages/HomePage';
-import { RegistrationPage } from '../pages/registerpaage';
+import { RegistrationPage } from '../pages/RegistrationPage';
 import { RandomDataUtil } from '../utils/randomDataGenerator';
 import { TestConfig } from '../test.config';
 
