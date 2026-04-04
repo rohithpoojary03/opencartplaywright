@@ -15,15 +15,15 @@ import { test, expect,Page } from '@playwright/test';
 import { HomePage } from '../pages/HomePage';
 import { RegistrationPage } from '../pages/RegistrationPage';
 import { RandomDataUtil } from '../utils/randomDataGenerator';
-//import { TestConfig } from '../test.config';
+import { TestConfig } from '../test.config';
 
 let homePage: HomePage;
 let registrationPage: RegistrationPage;
-//let config: TestConfig;
+let config: TestConfig;
 
 test.beforeEach(async ({ page }) => {
-    //config = new TestConfig();
-    //await page.goto(config.appUrl); //Navigate to application URL 
+    config = new TestConfig();
+    await page.goto(config.appUrl); //Navigate to application URL 
     homePage = new HomePage(page);
     registrationPage = new RegistrationPage(page);
 
