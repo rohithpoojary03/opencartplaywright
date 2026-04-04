@@ -58,6 +58,6 @@ await page.waitForLoadState('networkidle');
 
     //Verify successful login by checking 'My Account' page presence
     const isLoggedIn=await myAccountPage.isMyAccountPageExists();
-    expect(isLoggedIn).toBeTruthy(false);
+    expect(isLoggedIn).toBeTruthy();
 
 })
